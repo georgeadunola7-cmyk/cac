@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Christ Apostolic Church · Your Assembly Name</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap">
+<style>
+:root{--bg:#faf8f3;--ink:#101a33;--muted:#5b6479;--navy:#0c1633;--navy2:#142456;--gold:#c9a24b;--gold2:#e6c778;--panel:#f1eee5;--line:#ddd8c8;--card:#fff;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0a1126;--ink:#eef0f7;--muted:#a3adc5;--panel:#101a38;--line:#24305a;--card:#131f45}}
+:root[data-theme="dark"]{--bg:#0a1126;--ink:#eef0f7;--muted:#a3adc5;--panel:#101a38;--line:#24305a;--card:#131f45}
+html{scroll-behavior:smooth;scroll-padding-top:5rem}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.02rem/1.7 Manrope,system-ui,sans-serif}
+h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;line-height:1.05;margin:0;font-weight:600}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 1.4rem}
+header.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:color-mix(in srgb,var(--navy) 92%,transparent);backdrop-filter:blur(10px);color:#fff}
+.bar .wrap{display:flex;justify-content:space-between;align-items:center;height:68px;gap:1rem}
+.logo{display:flex;align-items:center;gap:.7rem;text-decoration:none;font:700 1.15rem "Cormorant Garamond",serif;line-height:1.1}
+.logo small{display:block;font:500 .72rem Manrope;opacity:.7;letter-spacing:.04em}
+.bar nav{display:flex;gap:1.6rem;font-size:.92rem;font-weight:500}
+.bar nav a{text-decoration:none;opacity:.8}.bar nav a:hover{opacity:1}
+.btn{display:inline-block;background:linear-gradient(135deg,var(--gold2),var(--gold));color:#101a33;font-weight:700;padding:.8rem 1.5rem;border-radius:999px;text-decoration:none;border:0;font-family:inherit;font-size:.95rem;cursor:pointer;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn.ghost{background:none;color:#fff;border:1px solid rgba(255,255,255,.4)}
+a:focus-visible,button:focus-visible,textarea:focus-visible,input:focus-visible{outline:3px solid var(--gold2);outline-offset:3px}
+.hero{background:radial-gradient(900px 520px at 78% 40%,#25408f 0%,transparent 65%),var(--navy);color:#fff;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:2rem;align-items:center;padding-top:4.5rem;padding-bottom:0}
+.hero h1{font-size:clamp(3rem,8vw,6rem);font-weight:700}
+.hero h1 em{font-style:italic;color:var(--gold2)}
+.hero p.lead{max-width:44ch;font-size:1.15rem;opacity:.85;margin:1.5rem 0 2rem}
+.cta{display:flex;gap:.8rem;flex-wrap:wrap}
+.arch{width:100%;max-width:360px;justify-self:center;display:block;margin-bottom:-2px}
+.next{background:rgba(255,255,255,.06);border-top:1px solid rgba(201,162,75,.4)}
+.next .wrap{display:flex;flex-wrap:wrap;gap:1.5rem 3rem;align-items:center;justify-content:space-between;padding:1.4rem;grid-template-columns:none}
+.next b{font:600 1.5rem "Cormorant Garamond",serif;color:var(--gold2)}
+.next span{opacity:.8;font-size:.9rem;display:block}
+.count{display:flex;gap:1.2rem;font:600 1.7rem "Cormorant Garamond",serif}
+.count small{display:block;font:500 .7rem Manrope;opacity:.7}
+section{padding:5.5rem 0}
+.alt{background:var(--panel)}
+h2{font-size:clamp(2.2rem,5vw,3.4rem);margin-bottom:1rem}
+.intro{max-width:56ch;color:var(--muted);font-size:1.08rem}
+.grid{display:grid;gap:1.4rem;margin-top:2.5rem}
+.g3{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:1.8rem;box-shadow:0 12px 30px -18px rgba(12,22,51,.35)}
+.card h3{font-size:1.6rem;margin:.9rem 0 .4rem}.card p{margin:0;color:var(--muted);font-size:.97rem}
+.ic{width:46px;height:46px;border-radius:50%;background:var(--navy);display:grid;place-items:center}
+.ic svg{width:22px;height:22px;stroke:var(--gold2);fill:none;stroke-width:1.6}
+.about{display:grid;grid-template-columns:.9fr 1.1fr;gap:3.5rem;align-items:center}
+.portrait{aspect-ratio:4/5;border-radius:200px 200px 14px 14px;background:linear-gradient(160deg,var(--navy2),var(--navy));display:grid;place-items:center;color:var(--gold2);text-align:center;font:600 1.1rem "Cormorant Garamond",serif;padding:2rem;border:6px solid var(--card);box-shadow:0 0 0 1px var(--gold)}
+.quote{font:italic 600 1.6rem/1.35 "Cormorant Garamond",serif;border-left:3px solid var(--gold);padding-left:1.2rem;margin:1.5rem 0}
+.row{display:grid;grid-template-columns:90px 1fr auto;gap:1.4rem;align-items:center;padding:1.3rem 0;border-top:1px solid var(--line)}
+.row:last-child{border-bottom:1px solid var(--line)}
+.date{font:700 2.4rem "Cormorant Garamond",serif;color:var(--gold);line-height:1}
+.date small{display:block;font:600 .75rem Manrope;color:var(--muted)}
+.row h3{font-size:1.5rem}.row p{margin:.2rem 0 0;color:var(--muted);font-size:.93rem}
+.tag{font-size:.8rem;font-weight:600;border:1px solid var(--line);border-radius:999px;padding:.3rem .8rem;color:var(--muted)}
+.play{aspect-ratio:16/10;border-radius:10px;background:linear-gradient(135deg,var(--navy2),var(--navy));display:grid;place-items:center}
+.play i{width:54px;height:54px;border-radius:50%;background:var(--gold);display:grid;place-items:center}
+.play i:after{content:"";border-left:16px solid var(--navy);border-top:10px solid transparent;border-bottom:10px solid transparent;margin-left:4px}
+.give{background:linear-gradient(135deg,var(--navy),var(--navy2));color:#fff;border-radius:22px;padding:3.5rem;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+.give .intro{color:rgba(255,255,255,.75)}
+.acct{background:rgba(255,255,255,.08);border:1px solid rgba(201,162,75,.45);border-radius:14px;padding:1.6rem}
+.acct dl{margin:0 0 1.2rem;display:grid;grid-template-columns:auto 1fr;gap:.4rem 1.2rem;font-size:.95rem}
+.acct dt{opacity:.65}.acct dd{margin:0;font-weight:600}
+.acct .num{font:700 2rem "Cormorant Garamond",serif;color:var(--gold2)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem}
+textarea,input{width:100%;font:inherit;padding:.9rem 1rem;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--ink);margin-bottom:.8rem}
+textarea{min-height:130px;resize:vertical}
+.map{border-radius:14px;min-height:240px;background:repeating-linear-gradient(45deg,var(--panel),var(--panel) 14px,var(--bg) 14px,var(--bg) 28px);border:1px solid var(--line);display:grid;place-items:center;color:var(--muted);text-align:center;padding:1rem;font-size:.9rem}
+footer{background:var(--navy);color:#fff;padding:3rem 0;font-size:.92rem}
+footer .wrap{display:flex;justify-content:space-between;gap:2rem;flex-wrap:wrap}
+footer p{margin:.25rem 0;opacity:.75}
+footer .verse{font:italic 600 1.4rem "Cormorant Garamond",serif;color:var(--gold2);opacity:1;max-width:30ch}
+@media(max-width:820px){.hero .wrap,.about,.two,.give{grid-template-columns:1fr}.hero .wrap{padding-top:3rem}.arch{max-width:260px}.bar nav{display:none}.give{padding:2rem}.row{grid-template-columns:70px 1fr}.row .tag{display:none}section{padding:4rem 0}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+
+.menu{display:none;background:none;border:1px solid rgba(255,255,255,.4);color:#fff;border-radius:8px;padding:.45rem .7rem;font:600 .85rem Manrope;cursor:pointer}
+.bar nav a.on{opacity:1;color:var(--gold2)}
+.bar{transition:box-shadow .3s}.bar.scrolled{box-shadow:0 8px 24px -12px rgba(0,0,0,.6)}
+@keyframes up{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+@keyframes rise{from{opacity:0;transform:translateY(60px) scale(.96)}to{opacity:1;transform:none}}
+@keyframes pulse{0%,100%{opacity:.35}50%{opacity:.75}}
+@keyframes sway{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.hero h1{animation:up .9s .1s both}.hero .lead{animation:up .9s .3s both}.hero .cta{animation:up .9s .5s both}
+.arch{animation:rise 1.2s .2s both,sway 7s 1.4s ease-in-out infinite}
+.glow{animation:pulse 4.5s ease-in-out infinite}
+.vs{margin-top:1.8rem;font:italic 600 1.3rem "Cormorant Garamond",serif;color:var(--gold2);min-height:3.2rem;max-width:40ch;transition:opacity .5s}
+.vs.out{opacity:0}
+.rv{opacity:0;transform:translateY(28px);transition:opacity .7s,transform .7s}.rv.in{opacity:1;transform:none}
+.card{transition:transform .25s,box-shadow .25s}.card:hover{transform:translateY(-6px);box-shadow:0 22px 40px -18px rgba(12,22,51,.5)}
+.chips{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:1.6rem}
+.chip{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:.5rem 1.1rem;font:600 .88rem Manrope;cursor:pointer;transition:background .2s,color .2s}
+.chip[aria-pressed="true"]{background:var(--navy);color:var(--gold2);border-color:var(--navy)}
+.row.hide{display:none}
+.row{transition:background .2s}.row:hover{background:color-mix(in srgb,var(--gold) 9%,transparent)}
+.play{cursor:pointer;transition:filter .2s}.play:hover{filter:brightness(1.25)}.play:hover i{transform:scale(1.12)}.play i{transition:transform .2s}
+.modal{position:fixed;inset:0;background:rgba(5,9,22,.85);display:none;place-items:center;z-index:50;padding:1.4rem}
+.modal.open{display:grid;animation:up .3s both}
+.modal div{background:var(--card);border-radius:16px;padding:2rem;max-width:480px;text-align:center}
+.modal h3{font-size:2rem;margin-bottom:.6rem}
+@media(max-width:820px){.menu{display:block}.bar.open nav{display:flex;position:absolute;top:68px;left:0;right:0;flex-direction:column;gap:1rem;background:var(--navy);padding:1.2rem 1.4rem 1.6rem}.bar .btn{display:none}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+
+/* responsive pass */
+img,svg{max-width:100%}
+html{-webkit-text-size-adjust:100%}
+body{overflow-x:hidden}
+.logo span{min-width:0}
+@media(max-width:1060px){.menu{display:block}.bar nav{display:none}.bar.open nav{display:flex;position:absolute;top:68px;left:0;right:0;flex-direction:column;gap:1rem;background:var(--navy);padding:1.2rem 1.4rem 1.6rem}.bar .wrap>.btn{display:none}}
+@media(max-width:1000px){.hero .wrap{grid-template-columns:1fr;text-align:left;padding-top:3rem}.arch{max-width:300px;margin-top:1rem}.about,.two,.give{grid-template-columns:1fr}.about{gap:2.2rem}.portrait{max-width:340px;margin:0 auto;width:100%}.give{padding:2.4rem;gap:2rem}.two{gap:2.5rem}}
+@media(max-width:640px){body{font-size:1rem}.wrap{padding:0 1.1rem}section{padding:3.4rem 0}.bar .wrap{height:62px}.bar.open nav{top:62px}.logo{font-size:1rem;gap:.5rem}.logo small{font-size:.62rem}.logo svg{width:24px;height:24px;flex:none}.hero h1{font-size:clamp(2.5rem,13vw,3.4rem)}.hero p.lead{font-size:1.05rem}.cta .btn{flex:1 1 100%;text-align:center}.arch{max-width:230px}.next .wrap{flex-direction:column;align-items:flex-start;gap:.9rem}.count{gap:1rem;font-size:1.5rem}.grid{gap:1rem}.card{padding:1.4rem}.row{grid-template-columns:62px 1fr;gap:1rem}.date{font-size:2rem}.give{padding:1.5rem;border-radius:16px}.acct{padding:1.2rem}.acct .num{font-size:1.6rem;overflow-wrap:anywhere}.acct .btn{width:100%;text-align:center}#send{display:block;text-align:center}footer .wrap{flex-direction:column}.modal div{padding:1.5rem}.vs{font-size:1.15rem}}
+@media(max-width:380px){.logo small{display:none}.count{font-size:1.3rem}.chip{padding:.45rem .85rem;font-size:.82rem}}
+@media(min-width:1500px){.wrap{max-width:1280px}body{font-size:1.1rem}}
+@media(max-height:480px) and (orientation:landscape){.hero .wrap{padding-top:1.5rem}.arch{max-width:180px}}
+@media(hover:none){.card:hover{transform:none;box-shadow:0 12px 30px -18px rgba(12,22,51,.35)}.btn:hover{transform:none}}
+.btn,.chip,.menu,.bar nav a{min-height:44px;display:inline-flex;align-items:center;justify-content:center}
+.bar nav a{min-height:0;display:inline}
+@media(max-width:1060px){.bar.open nav a{display:block;min-height:44px;line-height:44px}}
+</style>
+</head>
+<body>
+<header class="bar"><div class="wrap">
+<a class="logo" href="#top" aria-label="Home"><svg width="30" height="30" viewBox="0 0 30 30"><path d="M13 3h4v8h8v4h-8v12h-4V15H5v-4h8z" fill="#e6c778"/></svg><span>Christ Apostolic Church<small>YOUR ASSEMBLY NAME · LAGOS</small></span></a>
+<nav><a href="#about">About</a><a href="#ministries">Ministries</a><a href="#events">Events</a><a href="#sermons">Sermons</a><a href="#give">Give</a><a href="#visit">Visit</a></nav>
+<a class="btn" href="#visit">Plan a visit</a>
+<button class="menu" id="mb" aria-expanded="false" aria-label="Menu">Menu</button>
+</div></header>
+
+<main id="top">
+<div class="hero">
+<div class="wrap">
+<div>
+<h1>A home for your <em>faith</em>, and your family.</h1>
+<p class="lead">Worship with us in Lagos. Come as you are, hear the Word, and find a community that prays with you and for you.</p>
+<div class="cta"><a class="btn" href="#visit">Join us this Sunday</a><a class="btn ghost" href="#sermons">Watch a message</a></div>
+<p class="vs" id="vs" aria-live="off"></p>
+</div>
+<svg class="arch" viewBox="0 0 300 420" role="img" aria-label="Church window with a cross">
+<defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e6c778" stop-opacity=".95"/><stop offset=".5" stop-color="#3b5bc4"/><stop offset="1" stop-color="#142456"/></linearGradient>
+<radialGradient id="r"><stop offset="0" stop-color="#fff" stop-opacity=".9"/><stop offset="1" stop-color="#e6c778" stop-opacity="0"/></radialGradient></defs>
+<path d="M10 420V160a140 140 0 0 1 280 0v260z" fill="none" stroke="#c9a24b" stroke-width="2"/>
+<path d="M30 420V162a120 120 0 0 1 240 0v258z" fill="url(#g)"/>
+<circle class="glow" cx="150" cy="150" r="90" fill="url(#r)"/>
+<g stroke="#e6c778" stroke-width="2" fill="none" opacity=".8"><path d="M150 42v378M30 250h240M30 330h240M150 42L60 160M150 42l90 118M150 42L100 250M150 42l50 208"/></g>
+<path d="M139 95h22v38h38v22h-38v70h-22v-70h-38v-22h38z" fill="#fff"/>
+</svg>
+</div>
+<div class="next"><div class="wrap">
+<div><span>Next service</span><b id="nsName">Sunday worship</b></div>
+<div class="count" aria-live="off"><div><span id="cd">0</span><small>DAYS</small></div><div><span id="ch">0</span><small>HOURS</small></div><div><span id="cm">0</span><small>MINS</small></div></div>
+</div></div>
+</div>
+
+<section id="about"><div class="wrap about">
+<div class="portrait">Add your pastor's photo here<br><span style="font-size:.9rem;opacity:.7;font-family:Manrope">Pastor Full Name</span></div>
+<div>
+<h2>Welcome to our family</h2>
+<p class="intro">We are an assembly of the Christ Apostolic Church, rooted in prayer, the Bible and the power of the Holy Spirit. Here you will find worship that lifts, teaching you can apply on Monday, and people who know your name.</p>
+<p class="quote">"Add a short welcome from your pastor here, in his or her own words."</p>
+<a class="btn" href="#visit" style="background:var(--navy);color:#fff">Meet the family</a>
+</div></div></section>
+
+<section id="ministries" class="alt"><div class="wrap">
+<h2>There is a place for everyone</h2>
+<p class="intro">Whatever your age or season of life, there is a group here to belong to.</p>
+<div class="grid g3">
+<div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3v18M5 9h14"/></svg></div><h3>Sunday worship</h3><p>Praise, prayer and the Word every Sunday morning, with Sunday school alongside.</p></div>
+<div class="card"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c0-4 3-6 7-6s7 2 7 6"/></svg></div><h3>Children</h3><p>A safe, joyful class where little ones learn about Jesus through stories and songs.</p></div>
+<div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 20 12 4l8 16-8-4z"/></svg></div><h3>Youth</h3><p>Fellowship, mentorship and honest conversations for teenagers and young adults.</p></div>
+<div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 10c0 5.5-7 10-7 10z"/></svg></div><h3>Women and men</h3><p>Groups that pray, learn and support one another through every stage of life.</p></div>
+<div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M5 5h14v10H8l-3 3z"/></svg></div><h3>Bible study</h3><p>Open discussion of Scripture on Tuesday evenings. Bring your Bible and questions.</p></div>
+<div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M8 3v8a4 4 0 0 0 8 0V3M12 15v6"/></svg></div><h3>Choir and music</h3><p>Use your voice or instrument to lead the congregation in worship.</p></div>
+</div></div></section>
+
+<section id="events"><div class="wrap">
+<h2>Coming up</h2>
+<p class="intro">Add your real dates here. Each row is one event.</p>
+<div class="chips" role="group" aria-label="Filter events"><button class="chip" data-f="all" aria-pressed="true">All</button><button class="chip" data-f="Prayer" aria-pressed="false">Prayer</button><button class="chip" data-f="Youth" aria-pressed="false">Youth</button><button class="chip" data-f="Service" aria-pressed="false">Services</button></div>
+<div style="margin-top:2rem">
+<div class="row" data-c="Service"><div class="date">12<small>OCT</small></div><div><h3>Annual thanksgiving service</h3><p>Sunday, 8:00 AM · Main auditorium</p></div><span class="tag">All welcome</span></div>
+<div class="row" data-c="Youth"><div class="date">19<small>OCT</small></div><div><h3>Youth fellowship night</h3><p>Saturday, 4:00 PM · Church hall</p></div><span class="tag">Youth</span></div>
+<div class="row" data-c="Prayer"><div class="date">02<small>NOV</small></div><div><h3>Family prayer and fasting</h3><p>Monday to Friday, 5:30 AM · Online and in church</p></div><span class="tag">Prayer</span></div>
+</div></div></section>
+
+<section id="sermons" class="alt"><div class="wrap">
+<h2>Recent messages</h2>
+<p class="intro">Missed a Sunday? Catch up here. Link each card to your YouTube or audio page.</p>
+<div class="grid g3">
+<div class="card"><div class="play"><i></i></div><h3 class="st">Walking in faith</h3><p>Pastor Full Name · 28 Sep</p></div>
+<div class="card"><div class="play"><i></i></div><h3 class="st">The power of prayer</h3><p>Pastor Full Name · 21 Sep</p></div>
+<div class="card"><div class="play"><i></i></div><h3 class="st">Love in the home</h3><p>Pastor Full Name · 14 Sep</p></div>
+</div></div></section>
+
+<section id="give"><div class="wrap"><div class="give">
+<div><h2>Give with a glad heart</h2><p class="intro">Your tithes and offerings support the church, the needy and the work of the gospel. Thank you for your faithfulness.</p></div>
+<div class="acct"><dl><dt>Account name</dt><dd>Your Assembly Name</dd><dt>Bank</dt><dd>Your Bank</dd></dl>
+<div class="num" id="acc">0000000000</div>
+<button class="btn" id="copy" style="margin-top:1rem">Copy account number</button></div>
+</div></div></section>
+
+<section id="visit" class="alt"><div class="wrap two">
+<div>
+<h2>Plan your visit</h2>
+<p class="intro">First time? Wear what is comfortable. Our ushers will welcome you and help you find a seat.</p>
+<p><strong>Address</strong><br>Street address, area, Lagos<br><span class="muted" style="color:var(--muted)">Near: add a landmark</span></p>
+<p><strong>Service times</strong><br>Sunday 8:00 AM · Tuesday 5:30 PM · Thursday 5:30 PM</p>
+<div class="map">Map goes here. Add your Google Maps link.</div>
+</div>
+<div>
+<h2 style="font-size:2.2rem">Send a prayer request</h2>
+<p class="intro" style="margin-bottom:1.2rem">Share what is on your heart. Our prayer team will pray with you.</p>
+<input id="nm" placeholder="Your name" aria-label="Your name">
+<textarea id="req" placeholder="How can we pray for you?" aria-label="Prayer request"></textarea>
+<a class="btn" id="send" href="#">Send on WhatsApp</a>
+</div></div></section>
+</main>
+
+<div class="modal" id="md" role="dialog" aria-modal="true"><div><h3 id="mt">Message</h3><p class="muted" style="color:var(--muted)">Link this card to your YouTube or audio page and the message will play here.</p><button class="btn" id="mc" style="background:var(--navy);color:#fff;margin-top:1rem">Close</button></div></div>
+<footer><div class="wrap">
+<div><p><strong>Christ Apostolic Church · Your Assembly Name</strong></p><p>Street address, Lagos, Nigeria</p><p>0800 000 0000 · hello@yourassembly.org</p></div>
+<p class="verse">"Let us not give up meeting together." Hebrews 10:25</p>
+</div></footer>
+
+<script>
+(function(){
+var slots=[[0,8,0,"Sunday worship"],[2,17,30,"Bible study"],[4,17,30,"Prayer meeting"]];
+function next(){var n=new Date(),best=null;slots.forEach(function(s){var d=new Date(n);d.setHours(s[1],s[2],0,0);d.setDate(n.getDate()+((s[0]-n.getDay()+7)%7));if(d<=n)d.setDate(d.getDate()+7);if(!best||d<best.d)best={d:d,n:s[3]}});return best}
+function tick(){var b=next(),ms=b.d-new Date(),m=Math.floor(ms/60000);
+document.getElementById("nsName").textContent=b.n;
+document.getElementById("cd").textContent=Math.floor(m/1440);
+document.getElementById("ch").textContent=Math.floor(m%1440/60);
+document.getElementById("cm").textContent=m%60}
+tick();setInterval(tick,30000);
+document.getElementById("copy").onclick=function(){var b=this;try{navigator.clipboard.writeText(document.getElementById("acc").textContent).then(function(){b.textContent="Copied"})}catch(e){b.textContent="Select and copy the number"}};
+var WA="2340000000000";
+document.getElementById("send").onclick=function(){var t="Prayer request from "+(document.getElementById("nm").value||"a visitor")+": "+document.getElementById("req").value;this.href="https://wa.me/"+WA+"?text="+encodeURIComponent(t)};
+
+var bar=document.querySelector(".bar"),mb=document.getElementById("mb");
+mb.onclick=function(){var o=bar.classList.toggle("open");mb.setAttribute("aria-expanded",o)};
+bar.querySelectorAll("nav a").forEach(function(a){a.onclick=function(){bar.classList.remove("open")}});
+window.addEventListener("scroll",function(){bar.classList.toggle("scrolled",scrollY>20)},{passive:true});
+var vv=["Let us not give up meeting together. Hebrews 10:25","The Lord is my shepherd; I shall not want. Psalm 23:1","Pray without ceasing. 1 Thessalonians 5:17","Taste and see that the Lord is good. Psalm 34:8"],vi=0,ve=document.getElementById("vs");
+ve.textContent=vv[0];
+setInterval(function(){ve.classList.add("out");setTimeout(function(){vi=(vi+1)%vv.length;ve.textContent=vv[vi];ve.classList.remove("out")},500)},6000);
+if("IntersectionObserver" in window){
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{threshold:.15});
+document.querySelectorAll("section h2,.card,.row,.give,.portrait").forEach(function(el,i){el.classList.add("rv");el.style.transitionDelay=(i%3)*90+"ms";io.observe(el)});
+var links={};bar.querySelectorAll("nav a").forEach(function(a){links[a.getAttribute("href").slice(1)]=a});
+var so=new IntersectionObserver(function(es){es.forEach(function(e){var a=links[e.target.id];if(a&&e.isIntersecting){Object.keys(links).forEach(function(k){links[k].classList.remove("on")});a.classList.add("on")}})},{rootMargin:"-45% 0px -50% 0px"});
+document.querySelectorAll("main section").forEach(function(x){so.observe(x)})}
+document.querySelectorAll(".chip").forEach(function(c){c.onclick=function(){document.querySelectorAll(".chip").forEach(function(o){o.setAttribute("aria-pressed",o===c)});var f=c.dataset.f;document.querySelectorAll(".row[data-c]").forEach(function(r){r.classList.toggle("hide",f!=="all"&&r.dataset.c!==f)})}});
+var md=document.getElementById("md");
+document.querySelectorAll("#sermons .play").forEach(function(p){p.onclick=function(){document.getElementById("mt").textContent=p.parentNode.querySelector(".st").textContent;md.classList.add("open")}});
+document.getElementById("mc").onclick=function(){md.classList.remove("open")};
+md.onclick=function(e){if(e.target===md)md.classList.remove("open")};
+document.addEventListener("keydown",function(e){if(e.key==="Escape")md.classList.remove("open")});
+})();
+</script>
+</body>
+</html>
